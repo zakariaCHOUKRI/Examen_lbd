@@ -1,0 +1,47 @@
+DROP DATABASE IF EXISTS ExamenLBD4;
+CREATE DATABASE IF NOT EXISTS ExamenLBD4;
+USE ExamenLBD4;
+
+CREATE TABLE Users (
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(255),
+  email VARCHAR(255),
+  password VARCHAR(255),
+  is_admin BOOLEAN
+);
+
+CREATE TABLE Elections (
+  election_id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255),
+  description VARCHAR(255),
+  start_date DATE,
+  end_date DATE
+);
+
+CREATE TABLE Candidates (
+  candidate_id INT AUTO_INCREMENT PRIMARY KEY,
+  election_id INT,
+  name VARCHAR(255),
+  photo VARCHAR(255),
+  FOREIGN KEY (election_id) REFERENCES Elections(election_id)
+);
+
+CREATE TABLE Votes (
+  vote_id INT AUTO_INCREMENT PRIMARY KEY,
+  election_id INT,
+  user_id INT,
+  vote VARCHAR(255),
+  timestamp TIMESTAMP,
+  FOREIGN KEY (election_id) REFERENCES Elections(election_id),
+  FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+
+CREATE TABLE Programs (
+  program_id INT AUTO_INCREMENT PRIMARY KEY,
+  candidate_id INT,
+  program_title VARCHAR(255),
+  program_description VARCHAR(255),
+  program_video VARCHAR(255),
+  program_affiche VARCHAR(255),
+  FOREIGN KEY (candidate_id) REFERENCES Candidates(candidate_id)
+);
