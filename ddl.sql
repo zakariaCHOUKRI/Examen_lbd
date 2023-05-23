@@ -45,3 +45,10 @@ CREATE TABLE Programs (
   program_affiche VARCHAR(255),
   FOREIGN KEY (candidate_id) REFERENCES Candidates(candidate_id)
 );
+
+-- email: admin@admin password: admin
+INSERT INTO Users (username, email, password, is_admin) VALUES ('admin', 'admin@admin', '$2y$10$zo1Abi7dVKlH82EMwCC/heXiJY2tesEDqhfSe6arT/8nI3Wvg3fpe', 1);
+
+-- email: student@student password: student
+INSERT INTO Users (username, email, password, is_admin) VALUES ('student', 'student@student', '$2y$10$Wooi5rbG/umGPb1tFSz6VOtpuCCTzICuKE9sPTUOHqoDXHYVJ1jkq', 0);
+

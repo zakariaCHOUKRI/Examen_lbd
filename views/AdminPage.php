@@ -30,11 +30,11 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="#!">UM6P-Elections (admin dashboard)</a>
+                <a class="navbar-brand" href="../controllers/redirect.php">UM6P-Elections (admin dashboard)</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../controllers/redirect.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="../controllers/logout.php">Logout</a></li>
                     </ul>
                 </div>
@@ -61,28 +61,28 @@
             <div class="container px-5 my-5">
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <a href=""><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-box-seam lhov"></i></div></a>
-                        <h2 class="h4 fw-bolder">Vote</h2>
-                        <p>Vote for the student you think will represent you best and who you trust the most.</p>
-                        <a class="text-decoration-none" href="#!">
+                        <a href="./editCampaign.php"><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-pencil-square lhov"></i></div></a>
+                        <h2 class="h4 fw-bolder">Edit campaign</h2>
+                        <p>Edit details of an existing campaign.</p>
+                        <a class="text-decoration-none" href="./editCampaign.php">
                             Vote
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <a href=""><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-clipboard-check lhov"></i></div></a>
-                        <h2 class="h4 fw-bolder">Candidate</h2>
-                        <p>Run up for the next elections, represent other students and achieve your goals.</p>
-                        <a class="text-decoration-none" href="#!">
+                        <a href="./createCampaign.php"><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-file-earmark-plus lhov"></i></div></a>
+                        <h2 class="h4 fw-bolder">Create campaign</h2>
+                        <p>Create a new campaign.</p>
+                        <a class="text-decoration-none" href="./createCampaign.php">
                             Candidate
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                     <div class="col-lg-4">
-                        <a href=""><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-graph-up lhov"></i></div></a>
-                        <h2 class="h4 fw-bolder">See insights</h2>
-                        <p>See insights and graphs about the current campaign.</p>
-                        <a class="text-decoration-none" href="#!">
+                        <a href="./seeCampaigns.php"><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-eye lhov"></i></div></a>
+                        <h2 class="h4 fw-bolder">See campaigns</h2>
+                        <p>See the existing campaigns.</p>
+                        <a class="text-decoration-none" href="./seeCampaigns.php">
                             See insights
                             <i class="bi bi-arrow-right"></i>
                         </a>
