@@ -1,3 +1,15 @@
+<?php
+	if(!isset($_SESSION))
+	{
+		session_start();
+	}
+
+
+  if (!isset($_SESSION) || $_SESSION["is_admin"] != 0) {
+    include_once '../controllers/redirect.php';
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,12 +30,12 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="#!">UM6P-Elections </a>
+                <a class="navbar-brand" href="#!">UM6P-Elections (student dashboard)</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Logout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../controllers/logout.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,7 +61,7 @@
             <div class="container px-5 my-5">
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-box-seam"></i></div>
+                        <a href=""><a href=""><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-box-seam lhov"></i></div></a>
                         <h2 class="h4 fw-bolder">Vote</h2>
                         <p>Vote for the student you think will represent you best and who you trust the most.</p>
                         <a class="text-decoration-none" href="#!">
@@ -58,7 +70,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-clipboard-check"></i></div>
+                        <a href=""><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-clipboard-check lhov"></i></div></a>
                         <h2 class="h4 fw-bolder">Candidate</h2>
                         <p>Run up for the next elections, represent other students and achieve your goals.</p>
                         <a class="text-decoration-none" href="#!">
@@ -67,7 +79,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-graph-up"></i></div>
+                        <a href=""><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-graph-up lhov"></i></div></a>
                         <h2 class="h4 fw-bolder">See insights</h2>
                         <p>See insights and graphs about the current campaign.</p>
                         <a class="text-decoration-none" href="#!">

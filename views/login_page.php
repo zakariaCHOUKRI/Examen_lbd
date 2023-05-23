@@ -4,9 +4,9 @@
 		session_start();
 	}
 	
-	// if (isset($_SESSION["role"])) {
-	// 	include_once '../controllers/redirect.php';
-	//   }
+	if (isset($_SESSION["is_admin"])) {
+		include_once '../controllers/redirect.php';
+	}
 ?>
 
 <!DOCTYPE html>
