@@ -28,7 +28,7 @@
     </head>
     <body>
         <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
             <div class="container px-5">
                 <a class="navbar-brand" href="../controllers/redirect.php">UM6P-Elections (admin dashboard)</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -41,13 +41,13 @@
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-dark py-5">
+        <header class="bg-custom py-5">
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
                         <div class="text-center my-5">
                             <h1 class="display-5 fw-bolder text-white mb-2">Manage elections</h1>
-                            <p class="lead text-white-50 mb-4">Use our platform to manage existing campaigns or create new ones!</p>
+                            <p class="lead text-white-50 mb-4">Use our platform to manage existing elections or create new ones!</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
                                 <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
                             </div>
@@ -61,28 +61,28 @@
             <div class="container px-5 my-5">
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <a href="./editCampaign.php"><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-pencil-square lhov"></i></div></a>
-                        <h2 class="h4 fw-bolder">Edit campaign</h2>
-                        <p>Edit details of an existing campaign.</p>
-                        <a class="text-decoration-none" href="./editCampaign.php">
+                        <a href="./editElection.php"><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-pencil-square lhov"></i></div></a>
+                        <h2 class="h4 fw-bolder">Edit election</h2>
+                        <p>Edit details of an existing election.</p>
+                        <a class="text-decoration-none" href="./editElection.php">
                             Vote
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <a href="./createCampaign.php"><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-file-earmark-plus lhov"></i></div></a>
-                        <h2 class="h4 fw-bolder">Create campaign</h2>
-                        <p>Create a new campaign.</p>
-                        <a class="text-decoration-none" href="./createCampaign.php">
+                        <a href="./createElection.php"><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-file-earmark-plus lhov"></i></div></a>
+                        <h2 class="h4 fw-bolder">Create election</h2>
+                        <p>Create a new election.</p>
+                        <a class="text-decoration-none" href="./createElection.php">
                             Candidate
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                     <div class="col-lg-4">
-                        <a href="./seeCampaigns.php"><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-eye lhov"></i></div></a>
-                        <h2 class="h4 fw-bolder">See campaigns</h2>
-                        <p>See the existing campaigns.</p>
-                        <a class="text-decoration-none" href="./seeCampaigns.php">
+                        <a href="./seeElections.php"><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3 lhov"><i class="bi bi-eye lhov"></i></div></a>
+                        <h2 class="h4 fw-bolder">See elections</h2>
+                        <p>See the existing elections.</p>
+                        <a class="text-decoration-none" href="./seeElections.php">
                             See insights
                             <i class="bi bi-arrow-right"></i>
                         </a>

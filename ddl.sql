@@ -13,7 +13,7 @@ CREATE TABLE Users (
 CREATE TABLE Elections (
   election_id INT AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(255),
-  description VARCHAR(255),
+  description TEXT,
   start_date DATE,
   end_date DATE
 );
@@ -22,7 +22,7 @@ CREATE TABLE Candidates (
   candidate_id INT AUTO_INCREMENT PRIMARY KEY,
   election_id INT,
   name VARCHAR(255),
-  photo VARCHAR(255),
+  photo TEXT,
   FOREIGN KEY (election_id) REFERENCES Elections(election_id)
 );
 
@@ -30,19 +30,20 @@ CREATE TABLE Votes (
   vote_id INT AUTO_INCREMENT PRIMARY KEY,
   election_id INT,
   user_id INT,
-  vote VARCHAR(255),
+  vote INT,
   timestamp TIMESTAMP,
   FOREIGN KEY (election_id) REFERENCES Elections(election_id),
-  FOREIGN KEY (user_id) REFERENCES Users(user_id)
+  FOREIGN KEY (user_id) REFERENCES Users(user_id),
+  FOREIGN KEY (vote) REFERENCES Candidates(candidate_id)
 );
 
 CREATE TABLE Programs (
   program_id INT AUTO_INCREMENT PRIMARY KEY,
   candidate_id INT,
   program_title VARCHAR(255),
-  program_description VARCHAR(255),
-  program_video VARCHAR(255),
-  program_affiche VARCHAR(255),
+  program_description TEXT,
+  program_video TEXT,
+  program_affiche TEXT,
   FOREIGN KEY (candidate_id) REFERENCES Candidates(candidate_id)
 );
 

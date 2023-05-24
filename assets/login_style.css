@@ -9,7 +9,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: linear-gradient(to bottom, #27374D, #DDE6ED);
+	background: linear-gradient(to bottom, #152733, #DDE6ED);
 }
 .main{
 	width: 350px;
@@ -62,7 +62,7 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #526D82;
+	background: #152733;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -73,7 +73,7 @@ button{
 	cursor: pointer;
 }
 button:hover{
-	background: #9DB2BF;
+	background: #526D82;
 }
 .login{
 	height: 460px;

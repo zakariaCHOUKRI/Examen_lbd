@@ -16,7 +16,7 @@
 <title>Vote</title>
 
 <!-- Responsive navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
             <div class="container px-5">
                 <a class="navbar-brand" href="../controllers/redirect.php">UM6P-Elections (student dashboard)</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -38,19 +38,26 @@
                         <form action="../controllers/candidateController.php" method="POST">
 
                             <div class="col-md-12">
-                               <input class="form-control" type="number" name="student_id" placeholder="Student ID" required>
+                               <input class="form-control" type="text" name="name" placeholder="Full name" required>
                             </div>
 
                             <div class="col-md-12">
-                               <input class="form-control" type="text" name="name" placeholder="Username" required>
+                                <input class="form-control" type="text" name="photo" placeholder="Photo Link" required>
                             </div>
 
                             <div class="col-md-12">
-                                <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
-                            </div>
+                                <select class="form-select mt-3" name="election_id" required>
+                                      <option selected disabled value="">Choose election</option>
 
-                           <div class="col-md-12">
-                              <input class="form-control" type="password" name="password" placeholder="Password" required>
+                                      <?php
+                                      
+                                      include_once '../controllers/fetchElections.php';
+                                      foreach ($fetchedElections as $election => $info) {
+                                        echo "<option value='".$info['election_id']."'>".$info['title']."</option>";
+                                      }
+
+                                      ?>
+                               </select>
                            </div><br>
 
                         <div class="form-check">

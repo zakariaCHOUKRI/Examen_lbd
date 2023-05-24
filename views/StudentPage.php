@@ -28,7 +28,7 @@
     </head>
     <body>
         <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
             <div class="container px-5">
                 <a class="navbar-brand" href="../controllers/redirect.php">UM6P-Elections (student dashboard)</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -41,7 +41,7 @@
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-dark py-5">
+        <header class="bg-custom py-5">
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
